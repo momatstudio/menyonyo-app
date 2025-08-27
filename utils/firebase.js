@@ -5,6 +5,8 @@ import {
   signInWithCredential,
 } from "firebase/auth";
 
+import { initializeAuth, getReactNativePersistence } from "firebase/auth";
+import ReactNativeAsyncStorage from "@react-native-async-storage/async-storage";
 export const firebaseConfig = {
   apiKey: "AIzaSyAA7x5B7JPgA0SdjvDkh4JHD_xXtXKmOUo",
   authDomain: "localfood-bca1e.firebaseapp.com",
@@ -17,4 +19,8 @@ export const firebaseConfig = {
 
 export const app = initializeApp(firebaseConfig);
 
-export const auth = getAuth(app);
+// export const auth = getAuth(app);
+
+export const auth = initializeAuth(app, {
+  persistence: getReactNativePersistence(ReactNativeAsyncStorage),
+});

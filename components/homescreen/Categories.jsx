@@ -35,7 +35,8 @@ export default function Categories({ navigation, restaurants }) {
             handleCategoryPress={handleCategoryPress}
           />
         )}
-        keyExtractor={(item, index) => index}
+        // keyExtractor={(item, index) => index}
+        keyExtractor={(item) => item.id}
         horizontal
         showsHorizontalScrollIndicator={false}
       />

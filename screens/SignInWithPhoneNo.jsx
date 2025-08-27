@@ -12,10 +12,10 @@ import React, { useContext, useRef, useState } from "react";
 
 import { AntDesign } from "@expo/vector-icons";
 
-import {
-  FirebaseRecaptchaVerifierModal,
-  FirebaseRecaptchaBanner,
-} from "expo-firebase-recaptcha";
+// import {
+//   FirebaseRecaptchaVerifierModal,
+//   FirebaseRecaptchaBanner,
+// } from "expo-firebase-recaptcha";
 
 import { PhoneAuthProvider, signInWithCredential } from "firebase/auth";
 import { auth, firebaseConfig } from "../utils/firebase";
